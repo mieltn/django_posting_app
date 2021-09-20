@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Office Notes</title>
+  </head>
+  <body>
+    <h1>Office Notes initiative</h1>
+    <p>Here you can take a part in making your office a better place!</p>
+    {% if latest_ideas_list %}
+        <ul>
+        {% for idea in latest_ideas_list %}
+            <li><a href="{% url 'polls:detail' idea.id %}">{{ idea.post_title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No new ideas are available.</p>
+    {% endif %}
+    <p>You're just about to <a href="{% url 'polls:add_idea' %}">make a change</a></p>
+  </body>
+</html>

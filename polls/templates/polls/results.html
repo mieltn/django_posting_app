@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Office Notes</title>
+  </head>
+  <body>
+    <h1>{{ idea.post_title }}</h1>
+    <p>
+      {% if idea.votes != 1 %}
+      <strong>{{ idea.votes }}</strong> collegues support this idea
+      {% else %}
+      <strong>{{ idea.votes }}</strong> collegue support this idea
+      {% endif %}
+    </p>
+    <a href="{% url 'polls:index' %}">Main page</a>
+  </body>
+</html>

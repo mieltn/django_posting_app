@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Office Notes</title>
+    <style>
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Post your initiative</h1>
+    <form action="{% url 'polls:writing_idea' %}" method="post">
+      {% csrf_token %}
+      <p>Enter your user name<p>
+      <input type="text" name="user_name">
+      <p>Create your idea title<p>
+      <input type="text" name="post_title">
+      <p>Describe your idea in more details<p>
+      <input type="text" name="post_text" size="100">
+      <input type=submit value="Post Idea">
+    </form>
+  </body>
+</html>
