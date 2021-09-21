@@ -1,4 +1,5 @@
 # django_posting_app
+The app allows to post your ideas, upvote and comment existing ones.
 To run app locally:
 - download the whole repo
 - create venv and install django in it
